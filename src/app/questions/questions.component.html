@@ -1,0 +1,83 @@
+<app-sidebar></app-sidebar>
+<body>
+  <div class="right1">
+    <div class="alert alert-success" *ngIf="test" role="alert">
+      Successfully added question
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="alert alert-danger" *ngIf="invalid" role="alert">
+      enter question parameters
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <!-- Button trigger modal -->
+    <h1 class="text-center">Questions Section</h1>
+    <button data-toggle="modal" data-target="#exampleModal">
+        Add question
+        </button><br><br>
+      <div class="display">
+          <h2 class="text-center">List of questions</h2>
+          <table>
+              <tr>
+                  <th>Question</th>
+                  <th>Question type</th>
+                  <th>Marks</th>
+              </tr>
+              <tr *ngFor="let data of question
+                        | paginate:{
+                          id:'listing_pagination',
+                          itemsPerPage:5,
+                          currentPage:page,
+                          totalitems:totalRecords
+                        }
+              ">
+                  <td>
+                      {{data.title}}
+                  </td>
+                  <td>
+                      {{data.type}}
+                  </td>
+                  <td>
+                      {{data.marks}}
+                  </td>
+              </tr>
+          </table>
+          <br>
+          <div class="paginations">
+            <pagination-controls
+              id="listing_pagination"
+              maxSize="5"
+              directionLinks="true"
+              (pageChange)="page = $event">
+            </pagination-controls>
+          </div>
+      </div>
+    </div>
+  </body>
+  <!-- Modal -->
+  <div class="modal" id="exampleModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLabel">Add question</h3>
+        </div>
+        <div class="modal-body">
+          <input type="text" placeholder="title" [(ngModel)]="title"><br>
+          <select [(ngModel)]="type" placeholder="type">
+            <option disabled selected >select type</option>
+            <option>MCQ</option>
+            <option>DESCRIPTIVE</option>
+          </select><br>
+          <input type="text" placeholder="marks" [(ngModel)]="marks"><br> 
+        </div>
+        <div class="modal-footer">
+            <button (click)="addquestion()" class="add" data-dismiss="modal">Add question</button>
+            <button data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

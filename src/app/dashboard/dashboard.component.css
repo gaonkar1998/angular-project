@@ -1,0 +1,9 @@
+a{
+    padding:15px;
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover{
+    text-decoration: none;
+  font-size: 20px;
+}

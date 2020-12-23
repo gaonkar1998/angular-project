@@ -1,0 +1,18 @@
+<html>
+<body>
+<div class="aligncenter">
+	<div class="alert alert-danger" *ngIf="test" role="alert">
+		Invalid Credentials
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		  <span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	<form >
+		<h3>Login</h3>
+		<input type="email" required [(ngModel)]="email" id="email" name="email" placeholder="enter email"><br>
+		<input type="password" required [(ngModel)]="password" id="pass" name="password" placeholder="enter password"><br>
+		<button (click)="login()">Login</button>
+	</form>
+</div>
+</body>
+</html>

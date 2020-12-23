@@ -1,0 +1,35 @@
+h3{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    margin-left: 75px;
+}
+.aligncenter{
+    margin-left:40%;
+    margin-top: 80px;
+    display: inline-block;
+    padding: 2%;
+    background-color: rgb(141, 135, 135);
+    box-shadow: 0px 0px 11px 0px rgba(48, 50, 50, 1);
+}
+input{
+    border: none;
+    border-bottom: 1px solid #000;
+    padding: 15px;
+    margin: 15px;
+}
+button{
+    margin-left: 75px;
+    padding: 5px;
+    border-radius: 10px;
+}
+button:hover{
+    color:white;
+    background-color: rgb(45, 235, 45);
+}
+.error{
+    color: red;
+    text-align: center;
+}
+body{
+    background-color:lightgrey;
+}

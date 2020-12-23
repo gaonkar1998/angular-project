@@ -1,0 +1,44 @@
+.right1{
+    margin-left:30%;
+    margin-top: 8%;
+    margin-right: 10%;
+    padding: 5%;
+    border-radius: 25px;
+    box-shadow:  -15px -15px 30px 0px rgba(50, 50, 50, 0.72);
+    background-color:lightgrey;
+}
+table, td, th {
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+  } 
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .add:hover{
+    background-color: green;
+    color: white;
+  }
+  input,select{
+    border: none;
+    border-bottom: 1px solid #000;
+    padding: 15px;
+    width: 180px;
+    text-align: center;
+}
+button{
+  float:right;
+}
+th{
+  background-color: grey;
+}
+td{
+ background-color:rgb(250, 246, 246);
+}
+.paginations{
+  float: right;
+}
+.modal-body{
+  margin-left: 25%;
+}

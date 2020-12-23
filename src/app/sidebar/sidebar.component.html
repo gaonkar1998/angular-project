@@ -1,0 +1,34 @@
+<div class="sidebar">
+    <ul>
+        <span class="admin" *ngIf="show_admin">
+            <li><a  routerLink="/admindashboard" routerLinkActive="active">DASHBOARD</a></li>
+        </span>
+        <span class="admin" *ngIf="show_student">
+            <li><a  routerLink="/studentdashboard" routerLinkActive="active">DASHBOARD</a></li>
+        </span>
+        <hr>
+        <span class="admin" *ngIf="show_admin">
+            <li><a  routerLink="/exams" routerLinkActive="active">Exam</a></li>
+        </span>
+        <span class="student" *ngIf="show_student">
+            <li><a routerLink="/branch" routerLinkActive="active">Branch</a></li>
+        </span>
+        <span class="admin" *ngIf="show_admin">
+            <li class="nav-item"><a routerLink="/questions" routerLinkActive="active">Question</a></li>
+        </span>
+        <span class="student" *ngIf="show_admin">
+            <li><a routerLink="javascript: void(0);"  routerLinkActive="active" (click)="logout()">logout</a></li>
+        </span>
+        <span class="student" *ngIf="show_student">
+            <li><a  routerLink="javascript: void(0);" (click)="logout()">logout</a></li>
+        </span>
+    </ul> 
+</div>
+<div class="right">
+    <span *ngIf="show_admin">
+        <h2>WELCOME ADMIN</h2>
+    </span>
+    <span *ngIf="show_student">
+        <h2>WELCOME STUDENT</h2>
+    </span>
+</div>

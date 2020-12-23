@@ -1,0 +1,29 @@
+<app-sidebar></app-sidebar>
+<body>
+<div class="right1 ">
+    <div class="display">
+        <h1 class="text-center">List of exams</h1>
+        <table>
+            <tr>
+                <th>Exam </th>
+                <th>Date</th>
+                <th>Duration</th>
+                <th>Count</th>
+                <tr *ngFor="let data of exams">
+                    <td>
+                        {{data.name}}
+                    </td>
+                    <td>
+                        {{data.date}}
+                    </td>
+                    <td>
+                        {{data.duration}}
+                    </td>
+                    <td>
+                        {{data.questionCount}}
+                    </td>
+                </tr>
+        </table>
+    </div>
+</div>
+</body>
